@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Job Quick helps students and early-career professionals apply to better jobs with real human support."
+    />
+    <title>Job Quick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Urbanist:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/lenis.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="home-page">
+    <header class="site-header">
+      <a class="logo-mark" href="#home" aria-label="Job Quick homepage">
+        <img src="./assets/logo.svg" alt="" />
+        <span>JobQuick</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="is-current" href="#home">Homepage</a>
+        <a href="#how">How We Apply</a>
+        <a href="./packages.html">Packages</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#intro">Get started</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <img class="hero-bg hero-bg-top" src="./assets/background-top.png" alt="" aria-hidden="true" />
+        <img class="hero-bg hero-bg-bot" src="./assets/background-bot.png" alt="" aria-hidden="true" />
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Autofill with human</p>
+            <h1>Your shortcut to Better Jobs</h1>
+            <p class="hero-lede">
+              Breaking into Wall Street or the Big 4 takes focus. While you prepare for interviews
+              and networking, our team manually applies to hundreds of relevant opportunities on
+              your behalf.
+            </p>
+            <div class="button-row">
+              <a class="primary-button" href="#apply">Start Your Search</a>
+              <a class="secondary-button" href="#how">See How We Get You Hired</a>
+            </div>
+
+            <div class="usp-row" aria-label="Service highlights">
+              <div>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.5 11.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path>
+                  <path d="M3 20a6.5 6.5 0 0 1 9.6-5.7"></path>
+                  <path d="m14.7 19.7 5-5a1.8 1.8 0 0 0-2.5-2.5l-5 5-.7 3.2 3.2-.7Z"></path>
+                </svg>
+                <span>Precious Applying with Human, Not Bots</span>
+              </div>
+              <div>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 3h10a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path>
+                  <path d="M8 7h6M8 11h4M8 15h3"></path>
+                  <path d="M16 13.5 19.5 10 21 11.5 17.5 15l-2 .5.5-2Z"></path>
+                </svg>
+                <span>Smart Job Tracker</span>
+              </div>
+              <div>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m21 3-7.5 18-3.2-7.3L3 10.5 21 3Z"></path>
+                  <path d="m10.5 13.5 4-4"></path>
+                </svg>
+                <span>Test your Resume in Real Application</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-art reveal">
+            <img
+              src="./assets/hero.png?v=20260618-hero2"
+              alt="Job Quick application tracker shown on a phone"
+              width="634"
+              height="607"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-section dark-section" id="intro">
+        <div class="container split-grid">
+          <div class="intro-copy reveal">
+            <p class="eyebrow light">Step Into Your Future</p>
+            <h2>Hand us the paperwork. Keep your peace of mind.</h2>
+            <div class="feature-list">
+              <article class="feature-item">
+                <img src="./assets/eye.svg" alt="" aria-hidden="true" />
+                <div>
+                  <h3>Total Transparency</h3>
+                  <p>
+                    You'll always know where your applications stand with real-time updates and
+                    clear visibility.
+                  </p>
+                </div>
+              </article>
+              <article class="feature-item">
+                <img src="./assets/clock.svg" alt="" aria-hidden="true" />
+                <div>
+                  <h3>Next-day Synchronization</h3>
+                  <p>We sync your application data daily so you're always aligned and up to date.</p>
+                </div>
+              </article>
+              <article class="feature-item">
+                <img src="./assets/lock.svg" alt="" aria-hidden="true" />
+                <div>
+                  <h3>Zero Credentials Exposure</h3>
+                  <p>Your logins stay private. We never access or store your passwords.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="form-card reveal">
+            <form
+              class="lead-form"
+              id="apply"
+              name="job-quick-lead"
+              method="POST"
+              action="https://formspree.io/f/mojzzwyb"
+            >
+              <div class="form-grid two">
+                <label>
+                  <span>Full name</span>
+                  <input name="name" placeholder="Full name" autocomplete="name" required />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input name="email" type="email" placeholder="Email" autocomplete="email" required />
+                </label>
+              </div>
+
+              <label>
+                <span>Target roles</span>
+                <input name="roles" placeholder="e.g. Product Manager, Actuarial Scientist" required />
+              </label>
+
+              <div class="form-grid two">
+                <label>
+                  <span>Level</span>
+                  <input name="level" placeholder="e.g. Internship, Entry level" required />
+                </label>
+                <label>
+                  <span>Applications per week</span>
+                  <input name="volume" placeholder="e.g. 50 applications" required />
+                </label>
+              </div>
+
+              <label>
+                <span>Target locations</span>
+                <input name="locations" placeholder="e.g. New York, Remote, San Francisco" />
+              </label>
+
+              <div class="form-grid two">
+                <label>
+                  <span>Facebook</span>
+                  <input name="facebook" placeholder="Facebook profile or URL" />
+                </label>
+                <label>
+                  <span>LinkedIn</span>
+                  <input name="linkedin" placeholder="LinkedIn profile or URL" />
+                </label>
+              </div>
+
+              <button class="primary-button wide" type="submit">Submit Application</button>
+              <p class="form-note">
+                We respect your privacy. Your information is encrypted and will not be shared with
+                third parties.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="applications-section" id="how">
+        <div class="container">
+          <h2 class="center-title reveal">Let Us Handle the Applications</h2>
+          <div class="application-cards reveal">
+            <article class="application-card">
+              <div>
+                <h3>Job Portals</h3>
+                <p>
+                  You repeatedly enter the same information across different company portals,
+                  wasting hours that could be spent preparing for interviews.
+                </p>
+              </div>
+              <img src="./assets/repeat.svg" alt="" aria-hidden="true" />
+            </article>
+            <article class="application-card">
+              <div>
+                <h3>Deadlines</h3>
+                <p>
+                  Many employers review applications on a rolling basis. Delaying applications
+                  because of coursework, exams, or other commitments can mean missing opportunities.
+                </p>
+              </div>
+              <img src="./assets/calendar.svg" alt="" aria-hidden="true" />
+            </article>
+            <article class="application-card">
+              <div>
+                <h3>Interview Prep</h3>
+                <p>
+                  When you spend all day copying and pasting links, you do not have time to practice
+                  interview questions. You miss out on great jobs because you ran out of time.
+                </p>
+              </div>
+              <img src="./assets/target.svg" alt="" aria-hidden="true" />
+            </article>
+          </div>
+        </div>
+        <img
+          class="applications-image"
+          src="./assets/applications.png"
+          alt="Student reviewing job applications at a desk"
+        />
+      </section>
+
+      <section class="process-section">
+        <div class="container process-grid">
+          <div class="process-copy reveal">
+            <h2>Safe. Fast. Hand-filled by real people.</h2>
+            <p>You tell us what kind of job you want, and our team fills out the applications for you.</p>
+            <div class="steps">
+              <article class="step">
+                <span>1</span>
+                <div>
+                  <h3>Align your criteria</h3>
+                  <p>
+                    Specify your preferred locations, target industries like Audit or Investment
+                    Banking, and graduation timeline. We build a personalized list of openings that
+                    match your OPT and student visa requirements.
+                  </p>
+                </div>
+              </article>
+              <article class="step">
+                <span>2</span>
+                <div>
+                  <h3>Execute the submissions</h3>
+                  <p>
+                    Our team completes your application fields accurately by hand. We ensure your
+                    resume bypasses portal filters safely.
+                  </p>
+                </div>
+              </article>
+              <article class="step">
+                <span>3</span>
+                <div>
+                  <h3>Deliver live updates</h3>
+                  <p>
+                    Every application submitted on your behalf is recorded in a shared tracker,
+                    giving you full visibility into your job search. Interview invitations,
+                    assessments, and employer communications are delivered directly to your email
+                    inbox.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="process-art reveal">
+            <img src="./assets/company-tiles.png" alt="Finance company tiles floating in a hand" />
+          </div>
+        </div>
+      </section>
+
+      <section class="quality-section perspective">
+        <div class="container quality-content">
+          <div class="quality-heading reveal">
+            <img src="./assets/quality.png" alt="" aria-hidden="true" />
+            <h2>Where quality meets scale</h2>
+            <p>
+              While automation tools use unstable scripts that trigger portal rejections, Job Quick
+              processes every submission manually to safeguard your candidate profile.
+            </p>
+          </div>
+          <div class="trust-grid reveal">
+            <article class="trust-card">
+              <img src="./assets/data.svg" alt="" aria-hidden="true" />
+              <h3>Data Control &amp; Security</h3>
+              <p>
+                Your credentials are fully encrypted. We maintain a strict zero-unauthorized policy:
+                no application is submitted without your final review.
+              </p>
+            </article>
+            <article class="trust-card">
+              <img src="./assets/private.svg" alt="" aria-hidden="true" />
+              <h3>Guaranteed Confidentiality</h3>
+              <p>
+                Your search is private. We never share candidate data, and we ensure your current
+                university, faculty, or employer is never contacted.
+              </p>
+            </article>
+            <article class="trust-card">
+              <img src="./assets/business.svg" alt="" aria-hidden="true" />
+              <h3>US Business Domain Expertise</h3>
+              <p>
+                Submissions are managed by specialists who understand the rigid screening rules of
+                US Finance, Accounting, Audit, Investment Banking, and Actuarial Science.
+              </p>
+            </article>
+            <article class="trust-card">
+              <img src="./assets/safe.svg" alt="" aria-hidden="true" />
+              <h3>Absolute Transparency</h3>
+              <p>
+                No hidden steps. You retain total ownership with real-time access to every portal
+                account, username, and submission status we generate.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <div class="container faq-grid">
+          <div class="faq-copy reveal">
+            <p class="eyebrow">Questions?</p>
+            <h2>We've got answers.</h2>
+            <p>
+              Learn how Job Quick works, our application process, and what to expect. Don't see your
+              question below? Contact us through the form above.
+            </p>
+          </div>
+          <div class="faq-list reveal">
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>Is this just an automated AI bot mass-applying for me?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No. Job Quick uses real people to complete applications by hand, so your
+                  submissions are handled carefully and do not rely on unstable portal scripts.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>Which Finance and Business fields do you specialize in?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We focus on Finance, Accounting, Audit, Investment Banking, Actuarial Science, and
+                  related early-career business roles.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>How do you handle international student visas like OPT or CPT?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We screen target roles around your work authorization needs and avoid wasting
+                  applications on openings that clearly do not match your profile.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>How do I know the jobs you pick are actually a good fit for me?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  You define the target role, industry, location, and constraints first. We build
+                  the application list around those criteria before submitting.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>How do I keep track of what you submitted?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  You receive a tracker showing applications, account details, submission status,
+                  and updates so you always know what has been completed.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>What if I find a good job online and want to apply to it?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Send it to the team and we can add it to your application queue if it fits your
+                  package and target criteria.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>Do you offer interview coaching or technical prep?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Job Quick is focused on application support. If coaching is available for your
+                  package, the team will confirm it during onboarding.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>What happens if I land a job before my package runs out?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Your account manager will help you review next steps based on the remaining work
+                  and your current package terms.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" aria-expanded="false">
+                <span>How long does it take to see results?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  It depends on the market, role, and your profile. Most candidates benefit from
+                  consistent application volume over multiple weeks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="./assets/logo-white.svg" alt="Job Quick" />
+          <p>Applications managed, opportunities unlocked.</p>
+          <p>Built for students pursuing competitive careers in Finance and Business.</p>
+          <a href="mailto:contact@jobquick.com">contact@jobquick.com</a>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>Product</h3>
+            <a href="#how">How We Apply</a>
+            <a href="./packages.html">Packages</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div>
+            <h3>Company</h3>
+            <a href="#home">About</a>
+            <a href="#intro">Contact</a>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <a href="#home">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="container copyright">&copy; 2026 Jobquick. All rights reserved.</div>
+    </footer>
+
+    <button class="scroll-top-button" type="button" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m6 15 6-6 6 6"></path>
+      </svg>
+    </button>
+
+    <script src="./assets/lenis.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
