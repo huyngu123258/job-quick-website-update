@@ -147,26 +147,75 @@
                 </label>
               </div>
 
-              <label>
-                <span>Target roles</span>
-                <select name="roles" required>
-                  <option value="Non-FO Finance / Business / Data Kickstart" selected>
-                    Non-FO Finance / Business / Data Kickstart
-                  </option>
-                  <option value="Non-FO Finance / Business / Data Basic">
-                    Non-FO Finance / Business / Data Basic
-                  </option>
-                  <option value="Non-FO Finance / Business / Data Pro">
-                    Non-FO Finance / Business / Data Pro
-                  </option>
-                  <option value="Front Office / Risk / Quantitative / Actuarial Basic">
-                    Front Office / Risk / Quantitative / Actuarial Basic
-                  </option>
-                  <option value="Front Office / Risk / Quantitative / Actuarial Pro">
-                    Front Office / Risk / Quantitative / Actuarial Pro
-                  </option>
-                </select>
-              </label>
+              <div class="lead-form-field">
+                <span id="roles-label">Target roles</span>
+                <div class="custom-select" data-custom-select>
+                  <input
+                    type="hidden"
+                    name="roles"
+                    value="Non-FO Finance / Business / Data Kickstart"
+                    required
+                  />
+                  <button
+                    class="custom-select-trigger"
+                    id="roles-trigger"
+                    type="button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-labelledby="roles-label roles-trigger"
+                  >
+                    <span class="custom-select-value">Non-FO Finance / Business / Data Kickstart</span>
+                    <span class="custom-select-caret" aria-hidden="true"></span>
+                  </button>
+                  <div class="custom-select-menu" role="listbox" aria-labelledby="roles-label" tabindex="-1">
+                    <button
+                      class="custom-select-option is-selected"
+                      type="button"
+                      role="option"
+                      aria-selected="true"
+                      data-value="Non-FO Finance / Business / Data Kickstart"
+                    >
+                      Non-FO Finance / Business / Data Kickstart
+                    </button>
+                    <button
+                      class="custom-select-option"
+                      type="button"
+                      role="option"
+                      aria-selected="false"
+                      data-value="Non-FO Finance / Business / Data Basic"
+                    >
+                      Non-FO Finance / Business / Data Basic
+                    </button>
+                    <button
+                      class="custom-select-option"
+                      type="button"
+                      role="option"
+                      aria-selected="false"
+                      data-value="Non-FO Finance / Business / Data Pro"
+                    >
+                      Non-FO Finance / Business / Data Pro
+                    </button>
+                    <button
+                      class="custom-select-option"
+                      type="button"
+                      role="option"
+                      aria-selected="false"
+                      data-value="Front Office / Risk / Quantitative / Actuarial Basic"
+                    >
+                      Front Office / Risk / Quantitative / Actuarial Basic
+                    </button>
+                    <button
+                      class="custom-select-option"
+                      type="button"
+                      role="option"
+                      aria-selected="false"
+                      data-value="Front Office / Risk / Quantitative / Actuarial Pro"
+                    >
+                      Front Office / Risk / Quantitative / Actuarial Pro
+                    </button>
+                  </div>
+                </div>
+              </div>
 
               <div class="form-grid two">
                 <label>

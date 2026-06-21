@@ -8,6 +8,7 @@ const pricingModeButtons = document.querySelectorAll("[data-pricing-mode]");
 const pricingPanels = document.querySelectorAll(".pricing-panel");
 const pricingSection = document.querySelector(".packages-pricing");
 const pricingNote = document.querySelector(".pricing-note");
+const customSelects = document.querySelectorAll("[data-custom-select]");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const headerOffset = 92;
 const lenisEasing = (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t));
@@ -167,6 +168,75 @@ if (scrollTopButton) {
 
   toggleScrollTopButton();
   window.addEventListener("scroll", toggleScrollTopButton, { passive: true });
+}
+
+if (customSelects.length) {
+  const closeCustomSelects = (exceptSelect = null) => {
+    customSelects.forEach((select) => {
+      if (select === exceptSelect) return;
+      const trigger = select.querySelector(".custom-select-trigger");
+      select.classList.remove("is-open");
+      trigger?.setAttribute("aria-expanded", "false");
+    });
+  };
+
+  customSelects.forEach((select) => {
+    const hiddenInput = select.querySelector('input[type="hidden"]');
+    const trigger = select.querySelector(".custom-select-trigger");
+    const value = select.querySelector(".custom-select-value");
+    const menu = select.querySelector(".custom-select-menu");
+    const options = select.querySelectorAll(".custom-select-option");
+
+    if (!hiddenInput || !trigger || !value || !menu || !options.length) return;
+
+    trigger.addEventListener("click", () => {
+      const willOpen = !select.classList.contains("is-open");
+      closeCustomSelects(select);
+      select.classList.toggle("is-open", willOpen);
+      trigger.setAttribute("aria-expanded", String(willOpen));
+      if (willOpen) {
+        menu.focus();
+      }
+    });
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        const nextValue = option.dataset.value || option.textContent?.trim() || "";
+        hiddenInput.value = nextValue;
+        value.textContent = nextValue;
+
+        options.forEach((item) => {
+          const isSelected = item === option;
+          item.classList.toggle("is-selected", isSelected);
+          item.setAttribute("aria-selected", String(isSelected));
+        });
+
+        select.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.focus();
+      });
+    });
+
+    menu.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        select.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.focus();
+      }
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (![...customSelects].some((select) => select.contains(event.target))) {
+      closeCustomSelects();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeCustomSelects();
+    }
+  });
 }
 
 document.querySelectorAll(".faq-item button").forEach((button) => {
