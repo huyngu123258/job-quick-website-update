@@ -1171,6 +1171,10 @@ h2 {
   outline: none;
 }
 
+.lead-form input::placeholder {
+  color: rgba(10, 10, 10, 0.38);
+}
+
 .wide {
   width: 100%;
   min-height: 48px;
